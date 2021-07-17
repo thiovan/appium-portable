@@ -1,0 +1,28 @@
+{
+  "name": "appium",
+  "version": "1.0.0",
+  "description": "Portable Appium Server (CLI)",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "build": "npx pkg ."
+  },
+  "author": "Thio Van Agusti",
+  "license": "ISC",
+  "dependencies": {
+    "appium": "^1.18.1",
+    "minimist": "^1.2.5",
+    "pkg": "^5.3.0"
+  },
+  "pkg": {
+    "targets": [
+      "node14-win-x64"
+    ],
+    "assets": [
+      "node_modules/appium/node_modules/io.appium.settings/**/*",
+      "node_modules/appium/node_modules/appium-adb/jars/**/*"
+    ],
+    "outputPath": "dist",
+    "compress ": "GZip"
+  }
+}
